@@ -1,0 +1,24 @@
+.template {
+    background-color: #FFF;
+    width: 15rem;
+    height: 20rem;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10rem;
+    margin-bottom: auto;
+}
+
+.form {
+    margin-left: 1.5rem;
+    margin-right: auto;
+    margin-top: 2.5rem;
+}
+
+.buttonlogin {
+    height: 3rem;
+    width: 10rem;
+    margin-top: 3rem;
+    margin-left: 2.5rem;
+    margin-right: auto;
+}

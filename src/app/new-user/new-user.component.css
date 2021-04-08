@@ -1,0 +1,20 @@
+.header {
+    width: 20rem;
+    margin: auto;
+    border-color: black;
+    border-style: outset;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin:auto;
+}
+
+.container2 {
+    margin: auto;
+    width: 20rem;
+    border-color: black;
+    border-style: outset;
+}

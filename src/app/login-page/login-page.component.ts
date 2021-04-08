@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login-page',
@@ -10,19 +12,26 @@ export class LoginPageComponent implements OnInit {
   login = {
     username: '',
     password: '',
+  };
+
+  users = {
+    username: 'admin',
+    password: 'admin'
   }
 
-
-  constructor() { }
+  constructor(
+    private router: Router) { }
 
   ngOnInit(): void {
   }
 
-
-
   authentication(){
-    console.log(this.login)
+    if( !this.login.username || !this.login.password) {
+      alert('Dados incompletos')
+    }else if(this.login.username != this.users.username && this.login.password != this.users.password ||  this.login.username == this.users.username && this.login.password != this.users.password || this.login.username != this.users.username && this.login.password == this.users.password) {
+      alert('Dados incorretos')
+    }else {
+      this.router.navigate(['main-page'])
+    };
   };
-
-
-}
+};

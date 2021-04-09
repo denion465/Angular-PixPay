@@ -3,3 +3,28 @@
     margin-right: auto;
     font-weight: bolder;
 }
+
+a {
+    font-family: monospace;
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+}
+
+
+button:hover,
+button:focus {
+  background: rgb(78, 78, 219);
+  transform: translateX(10px) scale(0.7);
+  cursor: pointer;
+}
+
+button {
+    padding: 33px;
+    font-size: 20px;
+    color: transparent;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    transition: transform 0.5s;
+    transform: translateX(3) scale(10);
+  }

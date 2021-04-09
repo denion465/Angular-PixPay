@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
-import { Login } from '../login.model';
-import { LoginsService } from '../logins.service';
+import { Login } from '../../login.model';
+import { LoginsService } from '../../logins.service';
 
 @Component({
   selector: 'app-new-user',

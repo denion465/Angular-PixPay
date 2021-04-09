@@ -14,11 +14,11 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { HeaderComponent } from './header/header.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { InfoUserComponent } from './info-user/info-user.component';
-import { NewUserComponent } from './new-user/new-user.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { InfoUserComponent } from './components/info-user/info-user.component';
+import { NewUserComponent } from './components/new-user/new-user.component';
 
 import { HttpClientModule } from '@angular/common/http';
 

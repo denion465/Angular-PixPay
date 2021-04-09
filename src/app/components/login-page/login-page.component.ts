@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router } from '@angular/router'
 
 
 @Component({
@@ -9,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginPageComponent implements OnInit {
 
+  peoples: any;
+  
   login = {
     username: '',
     password: '',
@@ -17,13 +20,21 @@ export class LoginPageComponent implements OnInit {
   users = {
     username: 'admin',
     password: 'admin'
-  }
+  };
 
   constructor(
-    private router: Router) { }
+    private router: Router,
+    private http: HttpClient) { }
 
   ngOnInit(): void {
-  }
+    this.getAllPeoples()
+  };
+
+  async getAllPeoples(){
+    this.http.get('http://localhost:4100/all').subscribe((resultado) => {
+      this.peoples = resultado
+    }) 
+  };
 
   authentication(){
     if( !this.login.username || !this.login.password) {

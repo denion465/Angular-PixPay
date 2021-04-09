@@ -22,3 +22,13 @@
     margin-left: 2.5rem;
     margin-right: auto;
 }
+
+.table {
+    background-color: #FFF;
+    border-radius: 8px;
+    margin-top: 15px;
+    height: 50rem;
+    width: 50rem;
+    font-size: 20px;
+    
+}

@@ -22,6 +22,14 @@ export class LoginPageComponent implements OnInit {
     password: 'admin'
   };
 
+  graph = {
+    data: [
+        { x: [1, 2, 3], y: [2, 6, 3], type: 'scatter', mode: 'Pie', marker: {color: 'red'} },
+        { x: [1, 2, 3], y: [2, 5, 3], type: 'bar' },
+    ],
+    layout: {width: '50%', height: 240, title: 'A Fancy Plot'}
+};
+
   constructor(
     private router: Router,
     private http: HttpClient) { }

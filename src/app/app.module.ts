@@ -22,6 +22,12 @@ import { NewUserComponent } from './components/new-user/new-user.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import * as PlotlyJS from 'plotly.js/dist/plotly.js';
+import { PlotlyModule } from 'angular-plotly.js';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+PlotlyModule.plotlyjs = PlotlyJS;
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     MainPageComponent,
     InfoUserComponent,
-    NewUserComponent
+    NewUserComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     MatCardModule,
     HttpClientModule,
+    PlotlyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,41 +1,25 @@
-<div style="background-color: transparent; width: 100%; display: flex; justify-content: center;">
-    <table style="background-color: whitesmoke;">
-        <tr>
-            <th>Nome</th>
-            <th>Sobrenome</th>
-            <th>Idade</th>
-            <th>Cidade/Estado</th>
-            <th>Profissão</th>
-            <th>Salário</th>
-        </tr>
-        <tr *ngFor="let aux of peoples">
-            <td>{{ aux.nome }}</td>
-            <td>{{ aux.sobrenome }}</td>
-            <td>{{ aux.idade }}</td>
-            <td>{{ aux.cidadeEstado }}</td>
-            <td>{{ aux.profissao }}</td>
-            <td>{{ aux.salario }}</td>
-        </tr>
-    </table>
+<div>
+    <div style="background-color: transparent; display: flex; justify-content: center;">
+    
+        <table style="background-color: whitesmoke;">
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Idade</th>
+                <th>Cidade/Estado</th>
+                <th>Profissão</th>
+                <th>Salário</th>
+            </tr>
+            <tr *ngFor="let aux of peoples">
+                <td>{{ aux.nome }}</td>
+                <td>{{ aux.sobrenome }}</td>
+                <td>{{ aux.idade }}</td>
+                <td>{{ aux.cidadeEstado }}</td>
+                <td>{{ aux.profissao }}</td>
+                <td>{{ aux.salario }}</td>
+            </tr>
+        </table>
+    
+    </div>
+    
 </div>
-
-
-
-
-
-
-
-<!-- <div class="template">
-    <form>
-        <mat-form-field class="form">
-        <mat-label>Usuário</mat-label>
-        <input matInput placeholder="usuario@pixpay" [(ngModel)]="login.username" name="input1"> 
-        </mat-form-field>
-        <mat-form-field class="form">
-        <input type="password" matInput placeholder="Senha" [(ngModel)]="login.password" name="input2">
-        </mat-form-field>
-        <button (click)="authentication()" class="buttonlogin" mat-raised-button color="primary">Entrar</button>
-    </form>
-</div> -->
-
-

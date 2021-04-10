@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
 
-html, body { height: 100%; background-image: linear-gradient(rgb(164, 49, 209), rgb(64, 64, 197)) }
+html, body { height: 100%; background: fixed; background-image: linear-gradient(rgb(164, 49, 209), rgb(64, 64, 197)) }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .container {
@@ -12,4 +13,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-right: auto;
     margin-top: 2rem;
     margin-bottom: auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
 }

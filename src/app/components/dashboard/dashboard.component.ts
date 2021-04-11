@@ -14,12 +14,12 @@ export class DashboardComponent implements OnInit {
 
   graph = {
     data: [
-        { x: [1, 2, 3, 5, 11, 4, 20], y: [2, 6, 3, 11, 8, 17, 14], type: 'scatter', mode: 'Pie', marker: {color: 'red'} },
-        { x: [12, 3, 9, 7, 10, 14, 5], y: [2, 5, 3, 6, 9, 10, 8], type: 'bar', marker: { color: ['#FFFF00','#FF4500','#7CFC00','#483D8B','#FF1493','#2F4F4F','#00FFFF','#4F4F4F','#0000FF','#FF00FF'] }},
+        { x: ['ABR/2020', 'MAI/2020', 'JUN/2020', 'JUL/2020', 'AGO/2020', 'SET/2020', 'OUT/2020', 'NOV/2020', 'DEZ/2020', 'JAN/2021', 'FEV/2021', 'MAR/2021'], y: [200, 166, 130, 111, 102, 177, 101, 45, 41, 154, 455], type: 'scatter', mode: 'Pie', name: 'Média', marker: {color: 'red' } },
+        { x: ['ABR/2020', 'MAI/2020', 'JUN/2020', 'JUL/2020', 'AGO/2020', 'SET/2020', 'OUT/2020', 'NOV/2020', 'DEZ/2020', 'JAN/2021', 'FEV/2021', 'MAR/2021'], y: [215, 254, 191, 74, 301, 149, 95, 51, 84, 257, 404], type: 'bar', name: 'Contratações', marker: { color: '#344a4a' }},
     ],
     layout: {
       width: this.innerWidthGraph + 100,
-      showlegend: false,
+      showlegend: true,
       height: 380,
       margin: {
         l:40,
@@ -33,13 +33,13 @@ export class DashboardComponent implements OnInit {
   graphDonut = {
 
     data: [{
-      values: [27, 11, 25, 8, 1, 3, 25],
-      labels: ['US', 'China', 'European Union', 'Russian Federation', 'Brazil', 'India', 'Rest of World' ],
+      values: [3540, 3412, 1554, 6551, 4587, 5448, 3558, 540, 610, 415, 220],
+      labels: ['Santander', 'Fleury', 'Natura', 'Espro', 'Callink', 'Sequoia', 'CIE', 'Movile', 'Avantia', 'Vocação', 'Albert Einstein'],
       text: 'CO2',
       textposition: 'inside',
       domain: {column: 1},
-      name: 'CO2 Emissions',
-      hoverinfo: 'label+percent+name',
+      name: 'Vagas',
+      hoverinfo: 'label+value+name',
       hole: .4,
       type: 'pie'
     }],
@@ -67,17 +67,21 @@ export class DashboardComponent implements OnInit {
   graphBar = {
     data: [
       {
-        x: ['giraffes', 'orangutans', 'monkeys', 'dogs', 'cats', 'spider', 'chicken', 'donkey', 'fish', 'bat', 'camel'],
+        x: ['Contabilidade', 'Saúde', 'Administrativo', 'TI', 'Não Informadas', 'Atendente', 'Advocacia', 'Psicologia', 'Design', 'Arquiteto', 'Engenehiros'],
         y: [20, 14, 23, 54, 77, 3, 45, 22, 9, 18, 11],
+        offsetgroup: '3',
         type: 'bar',
         marker: {
-          color: ['#FFFF00', '#0000FF', '#00FF00', '	#FF0000', '#00FFFF', '#FF00FF', '#ff8c00', '#2f4f4f	', '#4b0082	', '#4F4F4F	', '#0000FF	'],
+          opacity: 0.6,
+          color: 'rgb(158,202,225)',
           line: {
-            width: 0.5
+            color: [''],
+            width: 1.5
         }}
       },
     ],
     layout: {
+      xaxis: {range: [-0.75, 5.5]},
       showlegend: false,
       width: this.innerWidthGraph + 450,
       margin: {

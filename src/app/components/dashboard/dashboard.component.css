@@ -23,3 +23,27 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 25px;
 }
+
+.card-total:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 1em rgb(145, 156, 255);
+}
+
+.card-efetivadas:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 1em rgb(147, 255, 165);
+}
+
+.card-abertas:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 1em rgb(255, 205, 112);
+}
+
+.card-canceladas:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 1em rgb(255, 122, 122);
+}

@@ -1,22 +1,86 @@
 <div class="center row" style="width: 100%; margin: 0;">
 
+    <div class="row center" style="width: 95%; margin-top: 47px; margin-bottom: 25px;">
+
+        <div class="center col-6 col-xl-3" style="margin-bottom: 25px;">
+            <div class="card" style="width: 18rem; border: 1px solid #0026fff6; border-radius: 15px; background: #f4f6ff;">
+                <div class="card-body" style="padding: 10px; margin: 0px;">
+                    <h1 class="card-title" style="color: #0026fff6;"> Total de Vagas</h1>
+                    <h1 style="color: #0026fff6; text-align: end; margin-bottom: 0px;"> 575.142</h1>
+                    <p style="color: #0026fff6; text-align: end; margin-top: 1px;">vagas</p>
+                  </div>
+            </div>         
+        </div>
+
+        <div class="center col-6 col-xl-3" style="margin-bottom: 25px;">
+            <div class="card" style="width: 18rem; border: 1px solid #40ff00; border-radius: 15px; background: #f9fff7;">
+                <div class="card-body" style="padding: 10px; margin: 0px;">
+                  <h1 class="card-title" style="color: #36da00;"> Vagas Efetivadas</h1>
+                  <h1 style="color: #36da00; text-align: end; margin-bottom: 0px;"> 365.112</h1>
+                  <p style="color: #36da00; text-align: end; margin-top: 1px;">vagas</p>
+                </div>
+            </div>         
+        </div>
+
+        <div class="center col-6 col-xl-3" style="margin-bottom: 25px;">
+            <div class="card" style="width: 18rem; border: 1px solid #ff8800; border-radius: 15px; background: hsl(26, 100%, 99%);">
+                <div class="card-body" style="padding: 10px; margin: 0px;">
+                    <h1 class="card-title" style="color: #ff8800;"> Vagas Abertas</h1>
+                    <h1 style="color: #ff8800; text-align: end; margin-bottom: 0px;"> 178.242</h1>
+                    <p style="color: #ff8800; text-align: end; margin-top: 1px;">vagas</p>
+                  </div>
+            </div>         
+        </div>
+
+        <div class="center col-6 col-xl-3" style="margin-bottom: 25px;">
+            <div class="card" style="width: 18rem; border: 1px solid #ff0000; border-radius: 15px; background: #fff6f6;">
+                <div class="card-body" style="padding: 10px; margin: 0px;">
+                    <h1 class="card-title" style="color: #da0000;"> Vagas Canceladas</h1>
+                    <h1 style="color: #da0000; text-align: end; margin-bottom: 0px;"> 5.242</h1>
+                    <p style="color: #da0000; text-align: end; margin-top: 1px;">vagas</p>
+                  </div>
+            </div>         
+        </div>
+
+    </div>
+
     <div class="row" style="width: 95%;">
 
         <div class="center col-12 col-xl-6">
-            <div class="card" style="width: 100%; margin-top: 50px;">
- 
-                <div style="width: 100%; display: flex; justify-content: center;">
+            <div style="width: 100%;">
+                <div class="card-header card-header-graph">
+                    <span class="card-title">Vagas Mensais</span>
+                </div>
+                <div class="card-body card-body-graph center">
                     <plotly-plot [data]="graph.data" [layout]="graph.layout"></plotly-plot>
                 </div>
-
-            </div>            
+            </div>
         </div>
 
         <div class="center col-12 col-xl-6">
-            <div class="card" style="width: 100%; margin-top: 50px;">
+            <div style="width: 100%;">
+                <div class="card-header card-header-graph">
+                    <span class="card-title">Vagas Anuais</span>
+                </div>
+                <div class="card-body card-body-graph center">
+                    <plotly-plot [data]="graphDonut.data" [layout]="graphDonut.layout"></plotly-plot>
+                </div>
+            </div>
+        </div>
 
-                <div style="width: 100%; display: flex; justify-content: center;">
-                    <plotly-plot [data]="graphPie.data" [layout]="graphPie.layout"></plotly-plot>
+    </div>
+
+    <div class="row" style="width: 95%; margin-bottom: 40px;">
+
+        <div class="center col-12 col-xl-12">
+            
+            <div style="width: 100%; margin-top: 50px;">
+
+                <div class="card-header card-header-graph">
+                    <span class="card-title">Vagas Por Tipos</span>
+                </div>
+                <div class="card-body card-body-graph center">
+                    <plotly-plot [data]="graphBar.data" [layout]='graphBar.layout'></plotly-plot>
                 </div>
 
             </div>            
@@ -26,14 +90,49 @@
 
     <div class="row" style="width: 95%;">
 
+        <div class="center col-12 col-xl-6">
+
+            <div style="width: 100%;">
+                <div class="card-header card-header-graph">
+                    <span class="card-title">Formação Atuals</span>
+                </div>
+                <div class="card-body card-body-graph center">
+                    <plotly-plot [data]="graphFormation.data" [layout]="graphFormation.layout"></plotly-plot>
+                </div>
+            </div>
+          
+        </div>
+
+        <div class="center col-12 col-xl-6">
+
+            <div style="width: 100%;">
+                <div class="card-header card-header-graph">
+                    <span class="card-title">Data Término Curso Atual</span>
+                </div>
+                <div class="card-body card-body-graph center">
+                    <plotly-plot [data]="graphEndCourse.data" [layout]="graphEndCourse.layout"></plotly-plot>
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+
+    <div class="row" style="width: 95%; margin-bottom: 40px;">
+
         <div class="center col-12 col-xl-12">
-            <div class="card" style="width: 100%; margin-top: 50px;">
- 
-                <div style="width: 100%; display: flex; justify-content: center;">
-                    <plotly-plot [data]="graphBar"></plotly-plot>
+
+            <div style="width: 100%; margin-top: 50px;">
+
+                <div class="card-header card-header-graph">
+                    <span class="card-title">Vagas Por Tipos</span>
+                </div>
+                <div class="card-body card-body-graph center">
+                    <plotly-plot [data]="graphBarHorizontal.data" [layout]='graphBarHorizontal.layout'></plotly-plot>
                 </div>
 
-            </div>            
+            </div>
+           
         </div>
 
     </div>

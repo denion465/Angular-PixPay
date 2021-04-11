@@ -1,5 +1,5 @@
 .template {
-    background-color: #FFF;
+    background-color: rgb(255, 255, 255);
     width: 15rem;
     height: 20rem;
     border-radius: 10px;
@@ -43,5 +43,5 @@ td, th {
   }
 
   tr:nth-child(even) {
-    background-color: #eedaff;
+    background-color: #e6e4ff;
   }

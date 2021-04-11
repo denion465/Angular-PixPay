@@ -7,13 +7,13 @@
 span {
     font-family: monospace;
     text-decoration: none;
-    color: rgb(230, 230, 230);
+    color: rgb(255, 255, 255);
 }
 
 
 button:hover,
 button:focus {
-  background: rgb(102, 25, 228);
+  background: rgb(14, 11, 48);
   transform: translateX(10px) scale(0.7);
   cursor: pointer;
 }

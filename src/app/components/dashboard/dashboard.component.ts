@@ -172,19 +172,19 @@ export class DashboardComponent implements OnInit {
     data: [
       {
         x: [11210, 1451, 1202, 985, 854, 232],
-        y: ['Não preenchido', 'Ensino médio', 'Direito', 'Administração', 'Pedagogia', 'Psicologia'],
+        y: ['Tecnologia', 'Ensino médio', 'Direito', 'Administração', 'Pedagogia', 'Enfermagem'],
         name: 'Não preenchido',
         hoverinfo: 'y',
         orientation: 'h',
         marker: {
-          color: 'rgba(202,69,57)',
+          color: '#ff5745',
           width: 1
         },
         type: 'bar'
       },
       {
-        x: [8210, 2451, 802, 815, 242, 188],
-        y: ['Não preenchido', 'Ensino médio', 'Direito', 'Administração', 'Pedagogia', 'Psicologia'],
+        x: [3521, 9451, 8302, 1215, 3342, 488, 2210],
+        y: ['Tecnologia', 'Ensino médio', 'Direito', 'Administração', 'Pedagogia', 'Enfermagem', 'Psicologia'],
         name: 'São Paulo',
         orientation: 'h',
         type: 'bar',
@@ -194,8 +194,41 @@ export class DashboardComponent implements OnInit {
         }
       },
       {
+        x: [8210, 2451, 802, 815, 242, 188],
+        y: ['Tecnologia', 'Ensino médio', 'Direito', 'Administração', 'Pedagogia', 'Enfermagem'],
+        name: 'Belo horizonte',
+        orientation: 'h',
+        type: 'bar',
+        marker: {
+          color: '#07d1ff',
+          width: 1
+        }
+      },
+      {
+        x: [4555, 344, 3454, 44, 3453, 455, 233],
+        y: ['Tecnologia', 'Ensino médio', 'Direito', 'Administração', 'Pedagogia', 'Psicologia', 'Enfermagem'],
+        name: 'Santos',
+        orientation: 'h',
+        type: 'bar',
+        marker: {
+          color: '#8dc53a',
+          width: 1
+        }
+      },
+      {
+        x: [401, 78, 99, 102, 2201, 354, 10],
+        y: ['Tecnologia', 'Ensino médio', 'Direito', 'Administração', 'Pedagogia', 'Psicologia', 'Enfermagem'],
+        name: 'São Bernardo',
+        orientation: 'h',
+        type: 'bar',
+        marker: {
+          color: '#0068b4',
+          width: 1
+        }
+      },
+      {
         x: [9584, 3452, 2454, 1545, 242, 188, 325],
-        y: ['Não preenchido', 'Ensino médio', 'Direito', 'Administração', 'Pedagogia', 'Psicologia', 'Tecnologia'],
+        y: ['Tecnologia', 'Ensino médio', 'Direito', 'Administração', 'Pedagogia', 'Psicologia', 'Enfermagem'],
         name: 'Diadema',
         orientation: 'h',
         type: 'bar',
@@ -206,7 +239,7 @@ export class DashboardComponent implements OnInit {
       },
       {
         x: [4542, 45, 4800, 1545, 642, 888, 3655],
-        y: ['Não preenchido', 'Ensino médio', 'Direito', 'Administração', 'Pedagogia', 'Psicologia', 'Tecnologia'],
+        y: ['Tecnologia', 'Ensino médio', 'Direito', 'Administração', 'Pedagogia', 'Psicologia', 'Enfermagem'],
         name: 'Diadema',
         orientation: 'h',
         type: 'bar',
@@ -217,9 +250,8 @@ export class DashboardComponent implements OnInit {
       }
     ],
     layout: {
-      title: 'Curso/Cidade',
       barmode: 'stack',
-      width: this.innerWidthGraph + 400,
+      width: this.innerWidthGraph + 420,
     }
   }
 

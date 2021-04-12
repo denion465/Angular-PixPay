@@ -6,8 +6,16 @@
             <div class="card" style="width: 95%; border: 2px solid #0026fff6; border-radius: 15px; background: #f4f6ff;">
                 <div class="card-body card-total" style="padding: 10px; margin: 0px;">
                     <h1 class="card-title" style="color: #0026fff6;"> Total de Vagas</h1>
-                    <h1 style="color: #0026fff6; text-align: end; margin-bottom: 0px;"> 575.142</h1>
-                    <p style="color: #0026fff6; text-align: end; margin-top: 1px;">vagas</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <i style="color: #0026fff6; font-size: 40px; padding-left: 20px;" class="bi bi-server"></i>
+                        </div>
+                        <div class="col-6">
+                            <h1 style="color: #0026fff6; text-align: end; margin-bottom: 0px; margin-right: 20px;"> 575.142</h1>
+                            <p style="color: #0026fff6; text-align: end; margin-top: 1px; margin-right: 20px;">vagas</p>                            
+                        </div>
+                    </div>
+
                   </div>
             </div>         
         </div>
@@ -16,8 +24,15 @@
             <div class="card" style="width: 95%; border: 2px solid #40ff00; border-radius: 15px; background: #f9fff7;">
                 <div class="card-body card-efetivadas" style="padding: 10px; margin: 0px;">
                   <h1 class="card-title" style="color: #36da00;"> Vagas Efetivadas</h1>
-                  <h1 style="color: #36da00; text-align: end; margin-bottom: 0px;"> 365.112</h1>
-                  <p style="color: #36da00; text-align: end; margin-top: 1px;">vagas</p>
+                  <div class="row">
+                    <div class="col-6">
+                        <i style="color: #36da00; font-size: 40px; padding-left: 20px;" class="bi bi-bookmark-check"></i>
+                    </div>
+                    <div class="col-6">
+                        <h1 style="color: #36da00; text-align: end; margin-bottom: 0px; margin-right: 20px;">365.112</h1>
+                        <p style="color: #36da00; text-align: end; margin-top: 1px; margin-right: 20px;">vagas</p>                            
+                    </div>
+                </div>
                 </div>
             </div>         
         </div>
@@ -26,8 +41,15 @@
             <div class="card" style="width: 95%; border: 2px solid #ff8800; border-radius: 15px; background: hsl(26, 100%, 99%);">
                 <div class="card-body card-abertas" style="padding: 10px; margin: 0px;">
                     <h1 class="card-title" style="color: #ff8800;"> Vagas Abertas</h1>
-                    <h1 style="color: #ff8800; text-align: end; margin-bottom: 0px;"> 178.242</h1>
-                    <p style="color: #ff8800; text-align: end; margin-top: 1px;">vagas</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <i style="color: #ff8800; font-size: 40px; padding-left: 20px;" class="bi bi-arrow-clockwise"></i>
+                        </div>
+                        <div class="col-6">
+                            <h1 style="color: #ff8800; text-align: end; margin-bottom: 0px; margin-right: 20px;"> 178.242</h1>
+                            <p style="color: #ff8800; text-align: end; margin-top: 1px; margin-right: 20px;">vagas</p>
+                        </div>
+                    </div>
                   </div>
             </div>         
         </div>
@@ -36,8 +58,15 @@
             <div class="card" style="width: 95%; border: 2px solid #ff0000; border-radius: 15px; background: #fff6f6;">
                 <div class="card-body card-canceladas" style="padding: 10px; margin: 0px;">
                     <h1 class="card-title" style="color: #da0000;"> Vagas Canceladas</h1>
-                    <h1 style="color: #da0000; text-align: end; margin-bottom: 0px;"> 5.242</h1>
-                    <p style="color: #da0000; text-align: end; margin-top: 1px;">vagas</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <i style="color: #da0000; font-size: 40px; padding-left: 20px;" class="bi bi-x-octagon"></i>
+                        </div>
+                        <div class="col-6">
+                            <h1 style="color: #da0000; text-align: end; margin-bottom: 0px; margin-right: 20px;"> 5.242</h1>
+                            <p style="color: #da0000; text-align: end; margin-top: 1px; margin-right: 20px;">vagas</p>                            
+                        </div>
+                    </div>
                   </div>
             </div>         
         </div>
@@ -125,7 +154,7 @@
             <div style="width: 100%; margin-top: 50px;">
 
                 <div class="card-header card-header-graph">
-                    <span class="card-title">Vagas Por Tipos</span>
+                    <span class="card-title">Vagas Cidades/Área</span>
                 </div>
                 <div class="card-body card-body-graph center">
                     <plotly-plot [data]="graphBarHorizontal.data" [layout]='graphBarHorizontal.layout'></plotly-plot>

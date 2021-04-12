@@ -20,11 +20,14 @@ export class RatesComponent implements OnInit {
     
   }
 
-  calcularImposto(): void {
-    this.calculationsService.getCalculateImpostos(this.valorProduto).subscribe((data) => {
+  async calcularImposto() {
 
-    })
-    console.log(this.impostos)
+    try {
+      this.impostos = await this.calculationsService.getCalculateImpostos(this.valorProduto)
+    } catch (error) {
+      
+    }
+
   }
   
 }

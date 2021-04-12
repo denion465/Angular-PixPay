@@ -16,9 +16,19 @@
                 <td>{{ aux.idade }}</td>
                 <td>{{ aux.cidadeEstado }}</td>
                 <td>{{ aux.profissao }}</td>
-                <td>{{ aux.salario }}</td>
+                <td>{{ aux.salario | currency: 'BRL' }}</td>
+            </tr>
+            <tr>
+                <td><input placeholder="Nome" [(ngModel)]="addPeople.nome"></td>
+                <td><input placeholder="Sobrenome" [(ngModel)]="addPeople.sobrenome"></td>
+                <td><input placeholder="Idade" [(ngModel)]="addPeople.idade"></td>
+                <td><input placeholder="Cidade/Estado" [(ngModel)]="addPeople.cidadeEstado"></td>
+                <td><input placeholder="Profissão" [(ngModel)]="addPeople.profissao"></td>
+                <td><input placeholder="Salário" [(ngModel)]="addPeople.salario"></td>
+                <td><button value="Adicionar" (click)=sendPeople()></button></td>
             </tr>
         </table>
+
     
     </div>
     

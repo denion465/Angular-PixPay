@@ -10,34 +10,34 @@
           <mat-label>
             <strong>Nome</strong>
           </mat-label>
-          <input matInput placeholder="Digite seu nome" [formControl]="nome" required [(ngModel)]="login.name"> 
+          <input matInput placeholder="Digite seu nome" [formControl]="nome" required> 
         </mat-form-field>
         <mat-form-field appearance="fill">
           <mat-label>
             <strong>Sobrenome</strong >
           </mat-label>
-          <input matInput placeholder="Digite seu sobrenome" [formControl]="nome" required [(ngModel)]="login.sobrenome">
+          <input matInput placeholder="Digite seu sobrenome" [formControl]="nome" required>
         </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>
           <strong>Digite seu e-mail</strong>
         </mat-label>
-        <input matInput placeholder="exemplo@exemplo.com" [formControl]="email" required [(ngModel)]="login.email">
+        <input matInput placeholder="exemplo@exemplo.com" [formControl]="email" required>
         <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>
           <strong>Cidade/UF</strong>
         </mat-label>
-        <input matInput placeholder="Digite sua Cidade/UF" [formControl]="nome" required [(ngModel)]="login.cidadeEstado">
+        <input matInput placeholder="Digite sua Cidade/UF" [formControl]="nome" required>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>
           <strong>Profissão</strong >
         </mat-label>
-        <input matInput placeholder="digite sua Profissão" [formControl]="nome" required [(ngModel)]="login.profissao">
+        <input matInput placeholder="digite sua Profissão" [formControl]="nome" required>
       </mat-form-field>
-        <button (click)="createLogin()" mat-raised-button color="primary">
+        <button mat-raised-button color="primary">
           Salvar
         </button>
         <button mat-raised-button>

@@ -19,12 +19,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { InfoUserComponent } from './components/info-user/info-user.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
+import { RatesComponent } from './components/rates/rates.component'
 
 import { HttpClientModule } from '@angular/common/http';
 
 import * as PlotlyJS from 'plotly.js/dist/plotly.js';
 import { PlotlyModule } from 'angular-plotly.js';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CalculationsComponent } from './components/calculations/calculations.component';
+import { CalculationsService } from './services/calculations.service';
 PlotlyModule.plotlyjs = PlotlyJS;
 
 
@@ -36,7 +39,9 @@ PlotlyModule.plotlyjs = PlotlyJS;
     MainPageComponent,
     InfoUserComponent,
     NewUserComponent,
-    DashboardComponent
+    DashboardComponent,
+    RatesComponent,
+    CalculationsComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,7 @@ PlotlyModule.plotlyjs = PlotlyJS;
     ReactiveFormsModule,
     MatCardModule,
     HttpClientModule,
-    PlotlyModule
+    PlotlyModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

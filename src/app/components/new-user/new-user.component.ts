@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
-import { Login } from '../../login.model';
-import { LoginsService } from '../../logins.service';
 
 @Component({
   selector: 'app-new-user',
@@ -15,16 +13,9 @@ export class NewUserComponent implements OnInit {
 
   nome = new FormControl('', [Validators.required]);
 
-  login: Login = {
-      name: '',
-      sobrenome: '',
-      email: '',
-      cidadeEstado: '',
-      profissao: '',
-  }
 
-  constructor(private LoginsService: LoginsService,
-    private router: Router) { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -35,11 +26,5 @@ export class NewUserComponent implements OnInit {
     };
   };
 
-  createLogin():void {
-    this.LoginsService.create(this.login).subscribe(() => {
-      this.router.navigate(['/all'])
-    })
-
-  }
 
 };

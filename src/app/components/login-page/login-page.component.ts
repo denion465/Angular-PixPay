@@ -10,7 +10,18 @@ import { Router } from '@angular/router'
 })
 export class LoginPageComponent implements OnInit {
 
+  baseUrl = "http://localhost:4100/add"
+
   peoples: any;
+  
+  addPeople = {
+    nome: '',
+    sobrenome: '',
+    idade: '',
+    cidadeEstado: '',
+    profissao: '',
+    salario: '',
+  }
   
   login = {
     username: '',
@@ -43,6 +54,13 @@ export class LoginPageComponent implements OnInit {
       this.peoples = resultado
     }) 
   };
+
+    async sendPeople(){
+    this.http.post(this.baseUrl,this.addPeople).subscribe((resultado) => {
+      this.peoples = resultado
+    })
+    
+  }
 
   authentication(){
     if( !this.login.username || !this.login.password) {

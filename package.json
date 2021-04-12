@@ -23,6 +23,7 @@
     "@angular/router": "~11.2.8",
     "angular-plotly.js": "^3.1.0",
     "bootstrap": "^4.6.0",
+    "bootstrap-icons": "^1.4.1",
     "plotly.js": "^1.58.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

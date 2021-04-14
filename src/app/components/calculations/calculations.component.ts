@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalculationsService} from '../../services/calculations.service'
 
 @Component({
   selector: 'app-calculations',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculationsComponent implements OnInit {
 
-  constructor() { }
+  salarioB = ''
+  
+  salBruto:any = ''
+
+  constructor(private calculationsService: CalculationsService) { }
 
   ngOnInit(): void {
+  }
+
+  async calculoInss(){
+    try {
+      this.salBruto = await this.calculationsService.getCalculateSalarioInss(this.salarioB)
+      console.log(this.salBruto)
+    } catch (error) {
+      
+    }
   }
 
 }

@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
+import { People } from 'src/app/AppSettings';
+import { CalculationsService } from 'src/app/services/calculations.service';
 
 
 @Component({
@@ -14,36 +16,27 @@ export class LoginPageComponent implements OnInit {
 
   peoples: any;
   
-  addPeople = {
+  addPeople: People = {
     nome: '',
     sobrenome: '',
-    idade: '',
+    idade: null,
     cidadeEstado: '',
     profissao: '',
     salario: '',
   }
   
-  login = {
-    username: '',
-    password: '',
-  };
-
-  users = {
-    username: 'admin',
-    password: 'admin'
-  };
-
   graph = {
     data: [
         { x: [1, 2, 3], y: [2, 6, 3], type: 'scatter', mode: 'Pie', marker: {color: 'red'} },
         { x: [1, 2, 3], y: [2, 5, 3], type: 'bar' },
     ],
     layout: {width: '50%', height: 240, title: 'A Fancy Plot'}
-};
+  };
 
   constructor(
     private router: Router,
-    private http: HttpClient) { }
+    private http: HttpClient,
+    private calculationService: CalculationsService) { }
 
   ngOnInit(): void {
     this.getAllPeoples()
@@ -55,20 +48,14 @@ export class LoginPageComponent implements OnInit {
     }) 
   };
 
-    async sendPeople(){
-    this.http.post(this.baseUrl,this.addPeople).subscribe((resultado) => {
-      this.peoples = resultado
-    })
-    
-  }
 
-  authentication(){
-    if( !this.login.username || !this.login.password) {
-      alert('Dados incompletos')
-    }else if(this.login.username != this.users.username && this.login.password != this.users.password ||  this.login.username == this.users.username && this.login.password != this.users.password || this.login.username != this.users.username && this.login.password == this.users.password) {
-      alert('Dados incorretos')
-    }else {
-      this.router.navigate(['main-page'])
-    };
-  };
+  create(){
+    this.calculationService.sendPeople(this.addPeople).subscribe(() => {
+    },(error)=>{
+      console.log('error during post is ', error)
+  })
+  }
+  
+    
+  
 };

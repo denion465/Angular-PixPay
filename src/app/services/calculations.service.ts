@@ -44,11 +44,8 @@ export class CalculationsService {
     })
   }
 
-  sendPeople(addPeople: any): Observable<any> {
-    let params = new HttpParams()
-    params.set('pessoa', addPeople)
-    params.set('test', '2018')
-    return this.http.post<any>('http://localhost:4100/add', params.toString())
+  sendPeople(params: any): Observable<any> {
+    return this.http.post('http://localhost:4100/add', params)
   }
 
   postPeople(addPeople: People): Observable<any>{

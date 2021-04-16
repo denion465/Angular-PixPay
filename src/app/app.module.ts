@@ -27,7 +27,7 @@ import * as PlotlyJS from 'plotly.js/dist/plotly.js';
 import { PlotlyModule } from 'angular-plotly.js';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CalculationsComponent } from './components/calculations/calculations.component';
-import { CalculationsService } from './services/calculations.service';
+import { FormularioComponent } from './components/formulario/formulario.component';
 PlotlyModule.plotlyjs = PlotlyJS;
 
 
@@ -42,6 +42,7 @@ PlotlyModule.plotlyjs = PlotlyJS;
     DashboardComponent,
     RatesComponent,
     CalculationsComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,

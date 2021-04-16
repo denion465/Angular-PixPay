@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http'
+import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http'
 import  AppSettings from '../AppSettings'
-import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { People } from './People';
 
 @Injectable({
   providedIn: 'root'
@@ -49,5 +51,30 @@ export class CalculationsService {
     return this.http.post<any>('http://localhost:4100/add', params.toString())
   }
 
+  postPeople(addPeople: People): Observable<any>{
+    let API_ENDPOINT = `${AppSettings.API_ENDPOINT}/add-people`;
+    return this.http.post(API_ENDPOINT, addPeople)
+    .pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  getPeople(){
+    return this.http.get(`${AppSettings}/api`)
+  }
+
+  // Error
+  handleError(error: HttpErrorResponse) {
+    let errorMessage = '';
+    if (error.error instanceof ErrorEvent) {
+      // Handle client error
+      errorMessage = error.error.message
+    } else {
+      // Handle server error
+      errorMessage = `Error Code ${error.status}\nMessage: ${error.message}`;
+    }
+    console.log(errorMessage);
+    return throwError(errorMessage)
+  }
 
 }

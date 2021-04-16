@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
-import { People } from 'src/app/AppSettings';
 import { CalculationsService } from 'src/app/services/calculations.service';
 
 
@@ -12,18 +11,7 @@ import { CalculationsService } from 'src/app/services/calculations.service';
 })
 export class LoginPageComponent implements OnInit {
 
-  baseUrl = "http://localhost:4100/add"
-
   peoples: any;
-  
-  addPeople: People = {
-    nome: '',
-    sobrenome: '',
-    idade: null,
-    cidadeEstado: '',
-    profissao: '',
-    salario: '',
-  }
   
   graph = {
     data: [
@@ -39,23 +27,13 @@ export class LoginPageComponent implements OnInit {
     private calculationService: CalculationsService) { }
 
   ngOnInit(): void {
-    this.getAllPeoples()
+    // this.getAllPeoples()
   };
 
-  async getAllPeoples(){
-    this.http.get('http://localhost:4100/all').subscribe((resultado) => {
-      this.peoples = resultado
-    }) 
-  };
-
-
-  create(){
-    this.calculationService.sendPeople(this.addPeople).subscribe(() => {
-    },(error)=>{
-      console.log('error during post is ', error)
-  })
-  }
-  
-    
+  // async getAllPeoples(){
+  //   this.http.get('http://localhost:4100/all').subscribe((resultado) => {
+  //     this.peoples = resultado
+  //   }) 
+  // };    
   
 };

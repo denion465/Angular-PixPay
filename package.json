@@ -26,6 +26,7 @@
     "babel-runtime": "^6.26.0",
     "bootstrap": "^4.6.0",
     "bootstrap-icons": "^1.4.1",
+    "mongoose": "^5.12.4",
     "plotly.js": "^1.58.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

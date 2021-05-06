@@ -1,5 +1,5 @@
 .header {
-    width: 20rem;
+    width: 25rem;
     margin: auto;
     border-color: black;
     border-style: outset;
@@ -14,7 +14,7 @@ form {
 
 .container2 {
     margin: auto;
-    width: 20rem;
+    width: 25rem;
     border-color: black;
     border-style: outset;
 }

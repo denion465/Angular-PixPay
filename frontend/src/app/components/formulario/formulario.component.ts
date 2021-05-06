@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CalculationsService } from 'src/app/services/calculations.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
-
 
 @Component({
   selector: 'app-formulario',

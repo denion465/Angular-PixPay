@@ -1,0 +1,23 @@
+<div>
+    <div style="background-color: transparent; display: flex; justify-content: center; margin-bottom: 5%;">
+    
+        <table style="background-color: rgb(245, 245, 245); margin-bottom: 5%;">
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Idade</th>
+                <th>Cidade/Estado</th>
+                <th>Profissão</th>
+                <th>Salário</th>
+            </tr>
+            <tr *ngFor="let aux of peoples">
+                <td>{{ aux.nome }}</td>
+                <td>{{ aux.sobrenome }}</td>
+                <td>{{ aux.idade }}</td>
+                <td>{{ aux.cidadeEstado }}</td>
+                <td>{{ aux.profissao }}</td>
+                <td>{{ aux.salario | currency: 'BRL' }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

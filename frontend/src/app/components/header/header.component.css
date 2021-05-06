@@ -1,0 +1,30 @@
+.toolbar {
+    margin-left: 3rem;
+    margin-right: auto;
+    font-weight: bolder;
+}
+
+span {
+    font-family: monospace;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+button:hover,
+button:focus {
+  background: rgb(14, 11, 48);
+  transform: translateX(10px) scale(0.7);
+  cursor: pointer;
+}
+
+button {
+    padding: 33px;
+    font-size: 20px;
+    color: transparent;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    transition: transform 0.5s;
+    transform: translateX(3) scale(10);
+  }

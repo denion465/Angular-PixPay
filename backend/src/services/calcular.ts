@@ -1,5 +1,5 @@
 // class Calcular {
-    
+
 //     soma(a, b) {
 //         return Number(a) + Number(b);
 //     }

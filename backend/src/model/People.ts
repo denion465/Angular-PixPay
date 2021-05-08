@@ -1,24 +1,39 @@
-import mongoose, { Schema, Document } from 'mongoose'
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  CreateDateColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
-export interface PeopleInterface extends Document {
-  name: string,
-  lastName: string,
-  age: number,
-  cityUf: string,
-  profission: string,
-  wage: number,
+@Entity('peoples')
+class People {
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
+
+  @Column()
+  name: string;
+
+  @Column()
+  last_name: string;
+
+  @Column()
+  age: string;
+
+  @Column()
+  city_uf: string;
+
+  @Column()
+  profission: string;
+
+  @Column()
+  wage: string;
+
+  @CreateDateColumn()
+  created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
 }
 
-const PeopleSchema: Schema = new Schema({
-  name: { type: String, require: true },
-  lastName: { type: String, require: true },
-  age: { type: Number, require: true },
-  cityUf: { type: String, require: true },
-  profission: { type: String, require: true },
-  wage: { type: Number, require: true },
-},
-{
-  collection: 'Peoples'
-});
-
-export default mongoose.model<PeopleInterface>('People', PeopleSchema)
+export default People;
